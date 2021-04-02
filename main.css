@@ -8,8 +8,9 @@ body {
  border: 3px solid black;
 margin:auto;
 width:200px;
- height: 280px;
+ height: 285px;
  object-fit: scale-down;
+ margin-bottom: 15px;
 }
 .preview-image{
     width:200px;

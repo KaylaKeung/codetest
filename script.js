@@ -97,26 +97,81 @@ button.addEventListener("click", function(){
  furnitureName.style.color ="white";
  button.style.color="white";
 })
-  
+
+
 // get floor from airtable
 //loop through array and add each as
 // a class to the furniture container
-// var furnitureGenre = furniture.fields.floor;
-// furnitureGenre.forEach(function(floor){
-//   previewImage.classList.add(floor)
-// })
-// //add event listener to our filter
-// // to add an active class to furniture
-// var filterDiningTable = docoment.querySelector(".diningtable")
-// filterDiningTable.addEventListener("click",function(){
+var furnitureGenre = furniture.fields.floor;
+furnitureGenre.forEach(function(floor){
+  previewImage.classList.add(floor)
+})
+//add event listener to our filter
+// to add an active class to furniture
+var furnitureGenre = furniture.fields.floor;
+    furnitureGenre.forEach(function(floor) {
+      previewImage.classList.add(floor);
+    });
 
-//   if (previewImage.classList.contains("diningtable")){
-//     previewImage.style.backgroundColor = "black";
-//   }else{
-//     previewImage.style.backgroundColor ="white";
-//   }
-// })
+    // clicking on filter by pop
+    // change background of pop genres to red
+    // else change to white
+    var filterDiningTable = document.querySelector(".diningtable");
+    filterDiningTable.addEventListener("click", function() {
+      if (previewImage.classList.contains("diningtable")) {
+        previewImage.style.display = "flex";
+        previewImage.style.marginBottom= "15px";
+        previewImage.style.width= "200px";
+        previewImage.style.height= "285px";
+        previewImage.style.border= "3px solid black";
+        previewImage.style.margin= "auto";
+        previewImage.style.marginBottom= "15px";
+        furnitureImage.style.display="flex";
+        
+      } else {
+        
+        previewImage.style.width= "0";
+        previewImage.style.height= "0";
+        previewImage.style.border= "none";
+        previewImage.style.padding= "0";
+        previewImage.style.margin= "0";
+        furnitureImage.style.display="none";
+      }
 
+    });
+    var filterCoffeeTable = document.querySelector(".coffeetable");
+    filterCoffeeTable.addEventListener("click", function() {
+      if (previewImage.classList.contains("coffeetable")) {
+        previewImage.style.display = "flex";
+        previewImage.style.marginBottom= "15px";
+        previewImage.style.width= "200px";
+        previewImage.style.height= "285px";
+        previewImage.style.border= "3px solid black";
+        previewImage.style.margin= "auto";
+        previewImage.style.marginBottom= "15px";
+        furnitureImage.style.display="flex";
+        
+      } else {
+        
+        previewImage.style.width= "0";
+        previewImage.style.height= "0";
+        previewImage.style.border= "none";
+        previewImage.style.padding= "0";
+        previewImage.style.margin= "0";
+        furnitureImage.style.display="none";
+      }
+
+    });
+    var filterReset = document.querySelector(".reset");
+    filterReset.addEventListener("click", function() {
+
+        previewImage.style.width= "200px";
+        previewImage.style.height= "285px";
+        previewImage.style.border= "3px solid black";
+        previewImage.style.margin= "auto";
+        previewImage.style.marginBottom= "15px";
+        furnitureImage.style.display="flex";
+    });
   });
 }
 
